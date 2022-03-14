@@ -5,6 +5,9 @@ services:
   docs:
     build: docs/
     restart: unless-stopped
+  client:
+    build: client/
+    restart: unless-stopped
   gateway:
     build: gateway/
     restart: unless-stopped
@@ -13,3 +16,4 @@ services:
     depends_on:
       - api
       - docs
+      - client

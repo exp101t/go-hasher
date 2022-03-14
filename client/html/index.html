@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Go-Hasher</title>
+        <link rel="stylesheet" href="static/styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+        <script src="static/app.js"></script>
+        <meta name="viewport" content="width=device-width", initial-scale=1>
+    </head>
+    <body>
+        <div id="outer">
+            <div id="content">
+                <div id="header">Calculate hash</div>
+
+                <div id="inputs">
+                    <textarea id="data" rows="10"></textarea>
+                    <select id="hash_type">
+                        <option value="sha256">SHA-256</option>
+                        <option value="streebog256">Streebog (256 bit)</option>
+                        <option value="streebog512">Streebog (512 bit)</option>
+                    </select>
+                </div>
+
+                <div id="output">
+                    <label id="hash">No any data hashed yet.</label>
+                </div>
+
+                <div id="buttons">
+                    <button id="submit_button">Hash, darling, hash!</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

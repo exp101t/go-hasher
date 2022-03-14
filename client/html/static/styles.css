@@ -1,0 +1,60 @@
+html, body, #outer {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    font-weight: 800;
+}
+
+#content {
+    width: 400px;
+}
+
+#content * {
+    font-family: 'Montserrat';
+}
+
+#inputs {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+#data {
+    resize: vertical;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#hash_type {
+    width: 100%;
+    height: 30px;
+}
+
+#output {
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+#buttons {
+    vertical-align: middle;
+    float: right;
+}
+
+#buttons button {
+    text-transform: uppercase;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px;
+}
