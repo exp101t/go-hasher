@@ -15,3 +15,9 @@ After that, all you have to do is to run:
 ```bash
 docker-compose up -d
 ```
+
+## Documentation
+Documentation to API is available at `/api/docs`.
+
+## Demo
+Demo instance is available at https://hasher.exp101t.me/.
