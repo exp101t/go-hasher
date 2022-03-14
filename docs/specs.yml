@@ -1,0 +1,47 @@
+openapi: "3.0.0"
+info:
+  title: "Go Hasher API"
+  version: "1.0"
+paths:
+  /api/hash/{hashType}:
+    post:
+      description: "Perform data hashing"
+      parameters:
+        - name: hashType
+          in: path
+          description: "Hash type to use"
+          required: true
+          schema:
+            type: string
+            enum:
+              - sha256
+              - streebog256
+              - streebog512
+      requestBody:
+        content:
+          "application/json":
+            schema:
+              type: object
+              properties:
+                data:
+                  type: string
+                  example: "Hello World!"
+                  description: "Data to hash"
+              required:
+                - data
+      responses:
+        "200":
+          description: "Hashed data"
+          content:
+            "application/json":
+              schema:
+                type: object
+                properties:
+                  hash:
+                    type: string
+                    example: "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+                    description: "Hash of the data"
+                  error:
+                    type: string
+                    example: "Unexpected EOF"
+                    description: "Error text if occured"

@@ -1,0 +1,15 @@
+services:
+  api:
+    build: api/
+    restart: unless-stopped
+  docs:
+    build: docs/
+    restart: unless-stopped
+  gateway:
+    build: gateway/
+    restart: unless-stopped
+    ports:
+      - 80:80
+    depends_on:
+      - api
+      - docs
